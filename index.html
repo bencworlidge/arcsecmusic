@@ -6,12 +6,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/06c31878b8.js" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
     <title>Arcsec</title>
 </head>
 <body>
     <div id="main" class="container">
         <!--HEADER-->
-        <div class="row">
+        <div class="">
             <!--NAV-->
             <div id="nav" class="col-md-12">
                 <div id="title" class="col-md-4">
@@ -20,9 +21,9 @@
                 <div id="burger">
                     <!-- <i class="fas fa-bars"></i> -->
                     <ul>
-                        <li><a href="http://www.google.com">about</a></li>
-                        <li><a href="http://www.google.com">tour</a></li>
-                        <li><a href="http://www.google.com">store</a></li>
+                        <li><button onclick="toggleModalAbout()">about</button></li>
+                        <li><button onclick="toggleModalEmail()">email</button></li>
+                        <li><button onclick="toggleModalMusic()">music</button></li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +31,46 @@
         <!--MAIN Hero-->
         <div id="hero" class="row">
             <div class="col-md-12">
-                <img src="./resources/bg.png" />
+                <video autoPlay loop muted src="./resources/Web bg 2.mp4" />
+            </div>
+        </div>
+        <div id="parent-modal-about">
+            <div id="modal-about">
+                <div class="button">
+                    <button onclick="toggleModalAbout()">x</button>
+                </div>
+                <div class="title">
+                    <h2>about</h2>
+                </div>
+                <div class="para"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum incidunt corrupti quidem eos sunt dolorum eligendi, quas aliquid veritatis perferendis ea amet? Quos hic iure sunt enim fuga accusantium.</p>
+                </div>        
+            </div>
+        </div>
+        <div id="parent-modal-email">
+            <div id="modal-email">
+                <div class="button">
+                    <button onclick="toggleModalEmail()">x</button>
+                </div>
+                <div class="title">
+                    <h2>email</h2>
+                </div>
+                <div class="para">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum incidunt corrupti quidem eos sunt dolorum eligendi, quas aliquid veritatis perferendis ea amet? Quos hic iure sunt enim fuga accusantium.</p>
+                </div>
+            </div>
+        </div>
+        <div id="parent-modal-music">
+            <div id="modal-music">
+                <div class="button">
+                    <button onclick="toggleModalMusic()">x</button>
+                </div>
+                <div class="title">
+                    <h2>music</h2>
+                </div>    
+                <div class="para">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cum incidunt corrupti quidem eos sunt dolorum eligendi, quas aliquid veritatis perferendis ea amet? Quos hic iure sunt enim fuga accusantium.</p>
+                </div>
             </div>
         </div>
         <!--SOCIALS-->
